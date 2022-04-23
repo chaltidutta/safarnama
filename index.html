@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <title>Safarnama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap'); */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url("background3.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .fullscreen-video {
+            padding-left: 9.5cm;
+            padding-top: 2cm;
+        }
+
+        .bg-overlay {
+            position: fixed;
+            top: 5;
+            right: 5;
+            left: 0;
+            bottom: 0;
+            /* padding-left: 20cm; */
+            font-size: 30px;
+            font-family: cursive;
+            text-align: center;
+
+        }
+
+        .btn {
+            cursor: pointer;
+            border: 1px solid #000;
+            background-color: transparent;
+            height: 50px;
+            width: 200px;
+            color: #000;
+            font-size: 1.5em;
+            box-shadow: 0 6px 6px #000;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        .button {
+            padding: 10px;
+            padding-left: 43%;
+        }
+
+        .logo {
+            position: absolute;
+            height: 30px;
+            width: 30px;
+        }
+
+        .about {
+            height: 100cm;
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-overlay">
+        <h1><b>SAFARNAMA-2022</b></h1>
+    </div>
+    <video class="fullscreen-video" id="myVideo" autoplay="autoplay" muted loop>
+        <source src="movie.mp4" type="video/mp4">
+    </video>
+
+    <div>
+        <div class="button">
+            <!-- <button class="btn"><a href="index.html">Home</a></button> -->
+            <!-- <a href="joinUs.html">
+                <button class="btn"><b>Join Us</b></button>
+            </a> -->
+            <a href="joinUs.html">
+            <button class="btn"> Join Us</button></a>
+        </div>
+
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.addEventListener("touchstart", playVideo);
+            function playVideo() {
+                const video = document.getElementById('myVideo');
+                if (video.playing) {
+                } else {
+                    video.play();
+                }
+            }
+        });
+
+        // alert("click somewhere on this wishing page ❤️");
+
+        // setInterval(() => {
+        //     let r = Math.floor(Math.random() * imagess.length);
+        //     i.src = imagess[r];
+
+
+        // }, 5000);
+
+        // let c = 1;
+        // document.addEventListener('click', () => {
+        //     if (c == 1) {
+        //         let audio = new Audio('audio.mp3'); //add your song link here
+        //         audio.play();
+        //         c = c + 1
+        //     }
+
+        // });
+    </script>
+
+</body>
+
+</html>
